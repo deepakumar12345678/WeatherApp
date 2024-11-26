@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(photo-1561553873-e8491a564fd0.avif);
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    margin-top: 2rem;
+    max-width: 25rem;
+    border-radius: 10px;
+    box-shadow: 1px 2px 10px #ccc;
+    background-image: url(weather.avif);
+    background-size: cover;
+    background-position: center;
+    padding: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        max-width: 20rem;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        max-width: 100%;
+        margin: 0.5rem;
+        padding: 0.8rem;
+    }
+
+    .card .card-subtitle {
+        font-size: 3rem;
+    }
+
+    .card .cel:after,
+    .card .far:after {
+        font-size: 2rem;
+        margin-top: 0.2rem;
+    }
+}
+
+#weatherwidget {
+    min-height: 18rem;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.card {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card .card-subtitle {
+    font-size: 4rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.card .cel:after,
+.card .far:after {
+    content: "°";
+    position: absolute;
+    font-size: 2.5rem;
+    margin-top: 0.3rem;
+    font-weight: 400;
+    color: #333;
+}
